@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #ffecd2, #fcb69f);
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 1.5s ease;
+    border: 3px solid #ffc1c1;
+    position: relative;
+}
+
+.container::after {
+    content: "✨";
+    font-size: 50px;
+    color: #ffe2ff;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    color: #ff6f61;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: slideIn 1.5s ease;
+    text-shadow: 2px 2px 5px rgba(255, 153, 153, 0.5);
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+input {
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 2px solid #f8d7d7;
+    border-radius: 8px;
+    outline: none;
+    width: calc(100% - 1rem);
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #ff483f;
+}
+
+.greeting {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 1.5rem;
+    animation: fadeInUp 1s ease;
+    cursor: pointer;
+}
+
+.greeting img {
+    display: none;
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.transition-message {
+    font-size: 1.2rem;
+    color: #ff6f61;
+    margin-top: 1rem;
+    display: none;
+    animation: fadeInUp 1s ease;
+    text-align: center;
+}
